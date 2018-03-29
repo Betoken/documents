@@ -34,7 +34,7 @@ which means that an actor's merit should be proportional to the part of $V$ that
 
 Thus, in order to be called an *Incentivized Meritocracy*, a system should satisfy the above three (or just the first two if you're nitpicky) conditions.
 
-(Note: when proportionality is used in this paper, we always assume that the *coefficient of proportionality* is positive.)
+(Note: in this paper, $a \propto b$ is defined as $\frac{\partial a}{\partial b}=k$, where $k \in \mathbb{R^+}$ is a constant)
 
 ##2. Proof that IMs Optimize Their Values
 
@@ -106,7 +106,7 @@ A full SARS cycle of a $\alpha$-Implementation will be described below.
 
 * Condition 3 (merit $\propto$ contribution to value): 
 
-  $m^a_\tau = \sum_{t=1}^\tau R^a_t = \sum_{t=0}^{\tau - 1} \frac{M_t}{V_t}\Delta V^a_t$
+  $m^a_\tau = m^a_0+\sum_{t=1}^\tau R^a_t = m^a_0+ \sum_{t=0}^{\tau - 1} \frac{M_t}{V_t}\Delta V^a_t$
 
   $\because \forall a \in \mathbb{A}, \frac{\Delta M_\tau^a}{\Delta V_\tau^a} = \frac{R^a_\tau}{\Delta V_\tau^a} = \frac{\frac{M_\tau}{V_\tau}\Delta V_\tau^a}{\Delta V_\tau^a} = \frac{M_\tau}{V_\tau}$
 
@@ -116,7 +116,7 @@ A full SARS cycle of a $\alpha$-Implementation will be described below.
 
   $\therefore \forall t, \frac{M_t}{V_t} = constant$ .
 
-  $\therefore m^a_\tau = \sum_{t=0}^{\tau - 1} \frac{M_t}{V_t}\Delta V^a_t = \frac{M_\tau}{V_\tau}V^a_\tau \propto V^a_\tau$
+  $\therefore m^a_\tau = m^a_0 + \sum_{t=0}^{\tau - 1} \frac{M_t}{V_t}\Delta V^a_t = m^a_0+ \frac{M_\tau}{V_\tau}V^a_\tau \propto V^a_\tau$
 
   $\therefore$ condition 3 is met 
 
@@ -169,7 +169,7 @@ Due to the abovementioned modifications, Betoken's implementation is in fact onl
   >
   > $\therefore \forall t, \frac{M_t}{V_t} = constant$
   >
-  > $\therefore m^a_\tau = \sum_{t=0}^{\tau - 1} \frac{M_t}{V_t}[\Delta V^a_t + \pi s^a_t] = \frac{M_\tau}{V_\tau}(V^a_\tau + \pi \sum_{t=0}^{\tau - 1} s^a_t) \propto V^a_\tau$, and therefore condition 3 is approximately met.
+  > $\therefore m^a_\tau = m^a_0 + \sum_{t=0}^{\tau - 1} \frac{M_t}{V_t}[\Delta V^a_t + \pi s^a_t] = m^a_0 + \frac{M_\tau}{V_\tau}(V^a_\tau + \pi \sum_{t=0}^{\tau - 1} s^a_t) \propto V^a_\tau$, and therefore condition 3 is approximately met.
 
 * Since state transitions are modified to include commission and developer fees, condition 3 is only approximately met if $\beta , \gamma \ll 1$
 
