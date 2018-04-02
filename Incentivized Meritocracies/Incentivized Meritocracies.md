@@ -56,9 +56,11 @@ $\therefore \forall a \in \mathbb{A}, \frac{\partial V}{\partial v^a} = \frac{\p
 
 $\therefore \forall a \in \mathbb{A}, \frac{\partial V}{\partial v^a} = \frac{\partial V^a}{\partial v^a} = \frac{\partial V^a}{\partial v^{merit}}\frac{\partial v^{merit}}{\partial v^a}+\frac{\partial V^a}{\partial m^a}\frac{\partial m^a}{\partial v^a}=\frac{\partial V^a}{\partial v^{merit}}\frac{1}{m^a} + k\frac{1}{v^{merit}} (k=\frac{V^a}{m^a}>0)$
 
-If we make the reasonable assumption that $\frac{\partial v^{merit}}{\partial V^a}>0$, meaning that the more value an actor contributes to the system, the more valuable merit becomes, then:
+It is reasonable to assume that $\frac{\partial v^{merit}}{\partial V^a}>0$, meaning that the more value an actor contributes to the system, the more valuable merit becomes.
 
-$\forall a \in \mathbb{A}, \frac{\partial V}{\partial v^a}=\frac{1}{\frac{\partial v^{merit}}{\partial V^a}}\frac{1}{m^a} + k\frac{1}{v^{merit}}>0$
+* This depends on the specific implementation of how the system backs merit up with value. For systems that pay out dividends based on merit (ex. Betoken), this is the case.
+
+$\therefore\forall a \in \mathbb{A}, \frac{\partial V}{\partial v^a}=\frac{1}{\frac{\partial v^{merit}}{\partial V^a}}\frac{1}{m^a} + k\frac{1}{v^{merit}}>0$
 
 $Q.E.D.$
 
