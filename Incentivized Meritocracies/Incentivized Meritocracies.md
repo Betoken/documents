@@ -140,11 +140,9 @@ A full SARS cycle of Betoken's IM will be described below.
 
    - $0 \leq s^a_\tau \leq V_\tau \frac{m^a_\tau}{M_\tau}$ is the amount of value $a$ chooses to invest in performing the action
 
-3. $\forall a \in \mathbb{A}, R^a_{\tau + 1} = \frac{M_\tau}{V_\tau}[(A^a_\tau(s^a_\tau) - s^a_\tau) + \pi s^a_\tau]= \frac{M_\tau}{V_\tau}(\Delta V^a_\tau + \pi s^a_\tau)$
+3. $\forall a \in \mathbb{A}, R^a_{\tau + 1} = \frac{M_\tau}{V_\tau}(A^a_\tau(s^a_\tau) - s^a_\tau)= \frac{M_\tau}{V_\tau}\Delta V^a_\tau$
 
-   * $\pi \in \mathbb{R^+}$ is the inflation rate of merit
-
-   - Reward is given at time step $\tau + 1$, since the value of $A^a_\tau(s^a_\tau)$ is unknown until after the current time step is over
+   - Reward is given at time step $\tau + 1​$, since the value of $A^a_\tau(s^a_\tau)​$ is unknown until after the current time step is over
 
 4. State $S_{\tau + 1} = (V_{\tau + 1} = \sum_{a \in \mathbb{A}} A^a_\tau (s^a_\tau) + (V_\tau - \sum_{a \in \mathbb{A}}s^a_\tau) - \beta(\sum_{a \in \mathbb{A}} A^a_\tau (s^a_\tau) - V_\tau) - \gamma\sum_{a \in \mathbb{A}} A^a_\tau (s^a_\tau) \\= (1 - \beta - \gamma)\sum_{a \in \mathbb{A}} A^a_\tau (s^a_\tau) + (1+\beta) V_\tau- \sum_{a \in \mathbb{A}}s^a_\tau)$
 
@@ -158,20 +156,6 @@ A full SARS cycle of Betoken's IM will be described below.
 ---
 
 Due to the abovementioned modifications, Betoken's implementation is in fact only approximately an Incentivized Meritocracy.
-
-* Since a new term, $\frac{M_\tau}{V_\tau}\pi s^a_\tau$, is added in $R^a_{\tau + 1}$'s expression, condition 3 is only approximately met if $\pi \ll 1, |\Delta V_\tau^a| \gg 0$
-
-  > $\because \frac{\Delta M_\tau^a}{\Delta V_\tau^a} = \frac{R^a_\tau}{\Delta V_\tau^a} = \frac{\frac{M_\tau}{V_\tau}[\Delta V_\tau^a + \pi s^a_\tau] }{\Delta V_\tau^a} = \frac{M_\tau}{V_\tau}(1 + \frac{\pi s^a_\tau}{\Delta V_\tau^a})$ 
-  >
-  > $\therefore\pi \ll 1, |\Delta V_\tau^a| \gg 0 \implies \frac{\Delta M_\tau^a}{\Delta V_\tau^a} \approx \frac{M_\tau}{V_\tau}$  
-  >
-  > $\therefore \frac{M_\tau + \Delta M_\tau^a}{V_\tau + \Delta V_\tau^a} \approx \frac{M_\tau}{V_\tau}$
-  >
-  > $\therefore \frac{M_{\tau+1}}{V_{\tau+1}} =  \frac{M_\tau + \sum_{a \in \mathbb{A}} \Delta M_\tau^a}{V_\tau + \sum_{a \in \mathbb{A}} \Delta V_\tau^a} = \frac{M_{\tau}}{V_{\tau}}$
-  >
-  > $\therefore \forall t, \frac{M_t}{V_t} = constant$
-  >
-  > $\therefore m^a_\tau = m^a_0 + \sum_{t=0}^{\tau - 1} \frac{M_t}{V_t}[\Delta V^a_t + \pi s^a_t] = m^a_0 + \frac{M_\tau}{V_\tau}(V^a_\tau + \pi \sum_{t=0}^{\tau - 1} s^a_t) \propto V^a_\tau$, and therefore condition 3 is approximately met.
 
 * Since state transitions are modified to include commission and developer fees, condition 3 is only approximately met if $\beta , \gamma \ll 1$
 
