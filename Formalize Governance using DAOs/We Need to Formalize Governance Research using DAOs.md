@@ -159,3 +159,16 @@ We hope that our attempt to formalize our governance system can give you a refer
 
 ## Post Script: Where We're Headed--Inflection Point
 
+Where exactly will governance research lead us?
+
+Before the Internet, most organizations experienced significant decreases in efficiency as they accepted more members. This is caused by the increase in communication degradation and structural complexity. For example, the Athenian direct democracy was only viable due to the small population of citizens with voting rights; as you increase the number of voters, the time it takes to reach a decision inevitably increases, and the effort to educate all voters on the decisions at hand also increases, thus the efficiency of the system suffers a decrease. This is why most modern democracies are delegated democracies, where a small number of delegates make all the decisions.
+
+The introduction of the Internet changed this situation, but not completely. People can now communicate and collaborate much more efficiently, thanks to new tools empowered by the Internet: Slack, Google Docs, GitHub, etc.. However, the value of an organization still increases concavely with regard to the number of members, since the Internet did not fundamentally solve the issue of decreasing efficiency.
+
+What if an organization's value increased convexly, where the additional value of a new member actually increases as the organization has more people?
+
+This will become a reality once we reach the **inflection point** of governance systems. Instead of increasing sub-linearly, an organization's value will increase linearly, quadratically, or even exponentially as the organization gets bigger. Such organizations will be unstoppable once they're created, and I don't think we can predict what kind of ramifications they will have.
+
+That said, we do have a rough idea of how powerful they will be, based on what we have observed in online communities on platforms such as Reddit and Facebook. In such communities, the value of the system increases quadratically due to network effect ([Metcalfe's Law](https://en.wikipedia.org/wiki/Metcalfe's_law)), which is evident in the constant deluge of high quality user-generated content. (visit [r/WritingPrompts](https://reddit.com/r/WritingPrompts) and [r/nosleep](https://reddit.com/r/nosleep) to get a feel of it). After we reach the inflection point, all organizations will be able to employ the power of network effect in a similar fashion, and generate value explosively.
+
+We believe that our research into new governance systems using DAOs and smart contracts will one day bring us past the inflection point, and revolutionize how we as a species organize ourselves.
