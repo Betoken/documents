@@ -23,16 +23,22 @@ For each actor,
 
 Given actor $a$, if we denote their control as $c^a$, their merit as $m^a$, the amount of merit among all actors as $M=\sum_{i \in \mathbb{A}} m^i$ the value of each unit of merit as $v^{merit}$, we can formally write the above conditions as:
 
-1. $c^a \propto \frac{m^a}{M} (1)$
-2. $v^{merit} > 0 (2)$
+1. $c^a \propto \frac{m^a}{M}$
+2. $v^{merit} > 0​$
 
 However, they don't mean much if there isn't a clear definition of one's *merit*. If we denote the value of a system as $V$, we can say:
 
-* $m^a \propto V^a(3)$
+* $m^a \propto V^a$
 
 which means that an actor's merit should be proportional to the part of $V$ that can be attributed to the actor's actions. Of course, you can define merit as something else, but this definition captures well what people mean when they say "merit" in the context of an organization, and it's what we're going with.
 
-Thus, in order to be called an *Incentivized Meritocracy*, a system should satisfy the above three (or just the first two if you're nitpicky) conditions.
+Finally, we have the condition
+
+* $\frac{\partial v^{merit}}{\partial V^a}\gt0$
+
+which means that merit does not get devalued as an actor contributes value to the system. This is necessary because if merit does get devalued, the total amount of value actors own might decrease even if everyone's merit increases, which disincentivizes actors from earning merit.
+
+Thus, in order to be called an *Incentivized Meritocracy*, a system should satisfy the above four conditions.
 
 (Note: in this paper, $a \propto b$ is defined as $\frac{\partial a}{\partial b}=k$, where $k \in \mathbb{R^+}$ is a constant)
 
@@ -56,9 +62,7 @@ $\therefore \forall a \in \mathbb{A}, \frac{\partial V}{\partial v^a} = \frac{\p
 
 $\therefore \forall a \in \mathbb{A}, \frac{\partial V}{\partial v^a} = \frac{\partial V^a}{\partial v^a} = \frac{\partial V^a}{\partial v^{merit}}\frac{\partial v^{merit}}{\partial v^a}+\frac{\partial V^a}{\partial m^a}\frac{\partial m^a}{\partial v^a}=\frac{\partial V^a}{\partial v^{merit}}\frac{1}{m^a} + k\frac{1}{v^{merit}} (k=\frac{V^a}{m^a}>0)$
 
-It is reasonable to assume that $\frac{\partial v^{merit}}{\partial V^a}>0$, meaning that the more value an actor contributes to the system, the more valuable merit becomes.
-
-* This depends on the specific implementation of how the system backs merit up with value. For systems that pay out dividends based on merit (ex. Betoken), this is the case.
+$\because\frac{\partial v^{merit}}{\partial V^a}>0$
 
 $\therefore\forall a \in \mathbb{A}, \frac{\partial V}{\partial v^a}=\frac{1}{\frac{\partial v^{merit}}{\partial V^a}}\frac{1}{m^a} + k\frac{1}{v^{merit}}>0$
 
@@ -122,13 +126,15 @@ A full SARS cycle of a $\alpha$-Implementation will be described below.
 
   $\therefore$ condition 3 is met 
 
-Therefore, an $\alpha$-Implementation is necessarily an Incentivized Meritocracy, if additional measure is taken so that merit is being backed by value.
+* Condition 4 (merit doesn't get devalued as actors contribute value): Same as condition 2, depends on specific implementation.
+
+Therefore, an $\alpha$-Implementation is necessarily an Incentivized Meritocracy, if additional measure is taken so that merit is being backed by value and doesn't get devalued as actors contribute value.
 
 $Q.E.D.$
 
 ### 4.3 Betoken's $\alpha$-Implementation
 
-Betoken's Incentivized Meritocracy is a variant of $\alpha$-Implementation. 
+Betoken's Incentivized Meritocracy inherits $\alpha$-Implementation, and satisfies conditions 2 and 4 of Incentivized Meritocracy. 
 
 In Betoken, the value of the IM is the total funds, and one's merit is represented by one's Kairo balance.
 
@@ -142,11 +148,11 @@ A full SARS cycle of Betoken's IM will be described below.
 
 3. $\forall a \in \mathbb{A}, R^a_{\tau + 1} = \frac{M_\tau}{V_\tau}(A^a_\tau(s^a_\tau) - s^a_\tau)= \frac{M_\tau}{V_\tau}\Delta V^a_\tau$
 
-   - Reward is given at time step $\tau + 1​$, since the value of $A^a_\tau(s^a_\tau)​$ is unknown until after the current time step is over
+   - Reward is given at time step $\tau + 1$, since the value of $A^a_\tau(s^a_\tau)$ is unknown until after the current time step is over
 
 4. State $S_{\tau + 1} = (V_{\tau + 1} = \sum_{a \in \mathbb{A}} A^a_\tau (s^a_\tau) + (V_\tau - \sum_{a \in \mathbb{A}}s^a_\tau) - \beta(\sum_{a \in \mathbb{A}} A^a_\tau (s^a_\tau) - V_\tau) - \gamma\sum_{a \in \mathbb{A}} A^a_\tau (s^a_\tau) \\= (1 - \beta - \gamma)\sum_{a \in \mathbb{A}} A^a_\tau (s^a_\tau) + (1+\beta) V_\tau- \sum_{a \in \mathbb{A}}s^a_\tau)$
 
-   $\forall a \in \mathbb{A}, com^a_{\tau+1} = \beta(\sum_{a \in \mathbb{A}} A^a_\tau (s^a_\tau) - V_{\tau})\frac{m^a_{\tau+1}}{M_{\tau+1}}$ (Pay out commission to actors)
+   $\forall a \in \mathbb{A}, com^a_{\tau+1} = \beta\sum_{a \in \mathbb{A}} (A^a_\tau (s^a_\tau) -s^a_\tau)\frac{m^a_{\tau+1}}{M_{\tau+1}}$ (Pay out commission to actors)
 
    * Compared to a vanilla $\alpha$-Implementation, commission and developer fees is deducted from the value generated by actions.
      * $\beta \in [0, 1]$ is the *commission rate*, the percentage of profit to be awarded to actors based on their merit
@@ -162,6 +168,42 @@ Due to the abovementioned modifications, Betoken's implementation is in fact onl
   > $V_{\tau + 1} = (1 - \beta - \gamma)\sum_{a \in \mathbb{A}} A^a_\tau (s^a_\tau) + (1+\beta) V_\tau- \sum_{a \in \mathbb{A}}s^a_\tau \\= (1 - \beta - \gamma)[V_\tau + \sum_{a \in \mathbb{A}} (A^a_\tau (s^a_\tau) - s^a_\tau)] + (2\beta + \gamma)V_\tau - (\beta + \gamma)\sum_{a \in \mathbb{A}}s^a_\tau \\=  (1 - \beta - \gamma)(V_\tau + \sum_{a \in \mathbb{A}}\Delta V^a_\tau) + (2\beta + \gamma)V_\tau - (\beta + \gamma)\sum_{a \in \mathbb{A}}s^a_\tau$
   >
   > $\therefore \beta , \gamma \ll 1 \implies \frac{M_{\tau+1}}{V_{\tau+1}} \approx  \frac{M_\tau + \sum_{a \in \mathbb{A}} \Delta M_\tau^a}{V_\tau + \sum_{a \in \mathbb{A}} \Delta V_\tau^a} = \frac{M_{\tau}}{V_{\tau}}$
+
+---
+
+Since actors receive commissions based on their merit, Betoken's implementation satisfies conditions 2 and 4 of Incentivized Meritocracy.
+
+Denote the amount of commission an actor with one unit merit can get at time $t$ as $\overline{com}_t$, the change in value before taking commission and developer fees into account during time $t$ as $\Delta V'_{t}$.
+
+$\overline{com}_{t}=\frac{\beta}{M_t}max(0, \Delta V'_{t-1})$
+
+Providing an analytical expression of $v^{merit}_t$ with regard to $\overline{com}_t$ is difficult, since it depends on the actors' **expectation of future commissions**, which is hard to quantify, in addition to other factors. Thus, we define
+
+$v^{merit}_t=f(\overline{com}_t)$
+
+where $f$ is a function that has the following two properties:
+
+1. $x>0\implies f(x)>0$
+2. $\frac{df}{dx}>0$
+
+The properties stem from two simple intuitions:
+
+1. If one can receive commission from having merit, merit should have value.
+2. If the amount of commission one can get from having one unit merit increases, the value of merit should also increase.
+
+With that, it can be proven that Betoken's implementation satisfies conditions 2 and 4 of Incentivized Meritocracy.
+
+* Condition 2 (merit has value): Given property 1 of $f$, $v^{merit}>0$ if $\overline{com}>0$. From the expression of $\overline{com}_t$, it's obvious that $\overline{com}_t \ge 0$, so barring a constant bear market $\overline{com}_t$ will be positive.
+
+* Condition 4 (merit doesn't get devalued as actors contribute value):
+
+  $\forall a \in \mathbb{A},$
+
+  $\frac{\partial \overline{com}_t}{\partial V'^a_t}=\frac{\beta}{M_t}\frac{\partial(V'_t-V_{t-1})}{\partial V'^a_t}+\beta max(0, \Delta V'_{t-1})(-\frac{1}{M_t^2})\frac{M_t}{V'_t}=\frac{\beta}{M_t}(1-\frac{max(0, \Delta V'_{t-1})}{V'_t})=\frac{\beta}{M_t}min(1, \frac{V_{t-1}}{V'_t})>0$
+
+  $\because \frac{\partial v^{merit}_t}{\partial V'^a_t}=\frac{\partial v^{merit}_t}{\partial \overline{com}_t}\frac{\partial \overline{com}_t}{\partial V'^a_t}, \frac{\partial v^{merit}_t}{\partial \overline{com}_t}=\frac{\partial f(\overline{com}_t)}{\partial \overline{com}_t}>0$
+
+  $\therefore \frac{\partial v^{merit}_t}{\partial V'^a_t} > 0$
 
 ### 4.4 Remarks
 
