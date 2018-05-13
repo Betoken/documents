@@ -4,9 +4,11 @@
 
 **Disclaimer: Anything mentioned in this post could be horribly wrong or inaccurate. But hey, there's a non-negligible chance that a deadly Gamma ray burst hits Earth right now and kills everyone before you can feel anything, so does it *really* matter?**
 
+## Democracy Has Problems
+
 > Man is a political animal. --Aristotle
 
-From the city-states of Mesopotamia to the polis of Greece, from the Roman republic to the United States, governance systems have always been at the center of human civilizations. Before the introduction of free-market capitalism, it has been the governments who organized our economic activities, who dictated our beliefs, traditions, and ideologies, who decided how we lived our lives. Even now, it's safe to say that governments are pretty darn important to our everyday lives. 
+From the city-states of Mesopotamia to the poleis of Greece, from the Roman republic to the United States, governance systems have always been at the center of human civilizations. Before the introduction of free-market capitalism, it has been the governments who organized our economic activities, who dictated our beliefs, traditions, and ideologies, who decided how we lived our lives. Even now, it's safe to say that governments are pretty darn important to our everyday lives. 
 
 Before I go any further, let me define what a governance system is. A governance system consists of two major components:
 
@@ -17,7 +19,7 @@ Before I go any further, let me define what a governance system is. A governance
   * ex1. If you forget to take out the trash, you have to do it for a week.
   * ex2. If you murder someone, you get thrown in prison.
 
-Since governance systems are so important, you can almost bet that they're held together by duct tapes and zip ties. Seriously, until very recently, the only reason that rulers had sway over their subjects is that people literally believed some invisible sky-being pointed at the kings and queens and said "Yeah I want those guys to boss over you and you should also give all your money to them". Yes, human society only existed because everyone in the past fell for a scam that your old granny wouldn't fall for. (Greece was the exception, not the rule.)
+Since governance systems are so important, you can almost bet that they're held together by duct tapes and zip ties. Seriously, until very recently, the only reason that rulers had sway over their subjects is that people literally believed some invisible sky-being pointed at the kings and queens and said "Yeah I want those guys to boss over you and you should also give all your money to them". Yes, human society existed because everyone in the past fell for a scam that your old granny wouldn't fall for. (Greece was the exception, not the rule.)
 
 The Renaissance and the Enlightenment made that situation a lot better. We started to use our rationality to analyze our political systems, and finally called bullshit. We developed a theoretical framework to think about governance systems, namely modern political science. We also came up with the modern notion of a democratic republic, which derived power from the consent of its own people. Turns out it's pretty useful.
 
@@ -25,9 +27,11 @@ Victory? Not yet.
 
 >  Democracy is the worst form of government, except for all the others. --Winston Churchill
 
-Ever since WW2, democracy--rule of the people--has always been perceived as the natural, and the best, solution to governance, but reality is rarely so black-and-white. America has flouted its democratic system as the source of its ideological and moral superiority, despite the fact that political "donation" is considered free speech, the failed attempts to "establish democracy" in the Middle East, not to mention the election of Donald Trump. The democratic governments in western Europe have established welfare states where citizens enjoy free health care, free education, and the highest quality of life, but the sloth-like due process has not been able to properly handle the influx of refugees and the subsequent rise of terrorism and religious fundamentalism. And, as we've found out recently, Russia has been successfully meddling in foreign elections, in countries we have often viewed as the most successfully run democracies. 
+Ever since WW2, democracy--rule of the people--has always been perceived as the natural, and the best, solution to governance, but reality is rarely so black-and-white. America has flouted its democratic system as the source of its ideological and moral superiority, despite the fact that political "donation" is considered free speech, not to mention the failed attempts to "establish democracy" in the Middle East. The democratic governments in western Europe have established welfare states where citizens enjoy free health care, free education, and the highest quality of life, but the sloth-like due process has not been able to properly handle the influx of refugees and the subsequent rise of terrorism and religious fundamentalism. And, as we've found out recently, Russia has been successfully meddling in foreign elections, in countries we have often viewed as the most successfully run democracies. 
 
 If democracy--with all its vulnerabilities and disadvantages--is indeed the best governance system we as a species can come up with, then we're truly doomed.
+
+## Political Science Is NOT a Science
 
 But why are we facing such a crisis in our governance systems? Didn't we use political science to sort out all the problems we had with our governments? Why are our governments still so incompetent, inefficient, and vulnerable to attacks?
 
@@ -55,7 +59,9 @@ If only, if only there was some way for us to create an organization at almost n
 
 Surprise! We already do!
 
-The wondrous invention that I just described is called [Decentralized Autonomous Organization (DAO)](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization). DAOs are virtual organizations where "code is law": their rules and mechanisms are defined by immutable pieces of code ([smart contracts](https://en.wikipedia.org/wiki/Smart_contract)) running on blockchains such as [Ethereum](https://en.wikipedia.org/wiki/Ethereum). How do DAOs satisfy the properties I listed?
+## DAO Changes Everything...Well, Not Yet
+
+The wondrous invention that I just described is called [Decentralized Autonomous Organization (DAO)](https://en.wikipedia.org/wiki/Decentralized_autonomous_organization). DAOs are virtual organizations where "code is law": their rules and mechanisms are defined by immutable pieces of code ([smart contracts](https://en.wikipedia.org/wiki/Smart_contract)) running on blockchains such as [Ethereum](https://en.wikipedia.org/wiki/Ethereum). How do DAOs achieve all those things?
 
 1. You can build a DAO with any kind of decision-making system you want: 
    1. traditional ones like democracy, dictatorship, oligarchy
@@ -71,11 +77,11 @@ Now, with DAOs, you can build six shiny new governance systems before breakfast.
 
 I hope Political Scientists are thrilled.
 
-## Current Efforts
+### Current Efforts
 
 Now that I've hopefully hyped you up about DAOs, you are probably excited to hear about what amazing progress we have achieved. Well...let me just lay out the good stuff first.
 
-### The Good
+#### The Good
 
 * [Aragon](https://aragon.one/), an Ethereum-based platform for building DAOs, has [recently released version 0.5](https://blog.aragon.one/aragon-core-v0-5-the-architect-release-327c7163b89c), which you can start using right now.
 * [Augur](https://www.augur.net/), an Ethereum-based decentralized prediction market, is now in beta. [Gnosis](https://gnosis.pm/), another Ethereum-based prediction market, recently launched Gnosis Olympia, an alpha release. Prediction markets are essential to [Futarchy](https://en.wikipedia.org/wiki/Futarchy), a form of governance system where decisions are made based on predictions of how much value an action would bring.
@@ -84,7 +90,7 @@ Now that I've hopefully hyped you up about DAOs, you are probably excited to hea
 
 And now, as you might've guessed, the bad stuff.
 
-### The Bad
+#### The Bad
 
 The majority of existing efforts are focused on turning existing organizations into DAOs, rather than experimenting with radically new governance ideas. And guess what system everyone picked.
 
@@ -92,13 +98,13 @@ That's right, our dear ol' democracy.
 
 Whenever the word "governance" is mentioned in blockchain projects, you can bet that they're using some variation of token-based democracies--systems where you vote to make decisions, and your vote is weighted by how much tokens you own, just like how shareholders of a company use shares to vote and make decisions.
 
-Such systems are bound to be riddled with problems, the most prominent of which is the bribing attack. For example, you promise voters that everyone who votes No on an issue will get X dollars, if at the end of the vote the majority of votes go to Yes. This way, you can influence voters to vote No on an issue, likely without paying a dime, since voters rushing to vote No to get the reward means that the majority of votes is likely to go to No. 
+Such systems are bound to be riddled with problems, the most prominent of which is the bribing attack. To illustrate it in an example: Say you promise voters that everyone who votes No on a proposal will get paid, only if the proposal eventually passes. This way, you can influence voters to vote No on an issue, likely without paying a dime, since voters rushing to vote No to get the reward means that the proposal will likely be shot down. 
 
-Traditional corporations are somewhat resilient to bribing attacks, due to existing laws and regulations that punish such attacks, but token-based democracies are not regulated in the same way.
+Traditional corporations are somewhat resilient to bribing attacks, due to existing laws and regulations that punish such attacks, but token-based democracies are not regulated in the same way, and likely never will be.
 
-You can read more about it in the blog post [Plutocracy Is Still Bad](https://vitalik.ca/general/2018/03/28/plutocracy.html), written by Mr. Vitalik Wonderpants.
+You can read more about it in the blog post [Plutocracy Is Still Bad](https://vitalik.ca/general/2018/03/28/plutocracy.html), written by [Mr. Vitalik Wonderpants](https://vitalik.ca/).
 
----
+## It's About The Methodology
 
 Of course, I know what many of you nerds are gonna say: But what about the token democracy used in [insert project here], which deals with bribing attacks and [insert attacks here]? What about quadratic voting? Everything you've said is wrong, [insert 5th-gen blockchain here] is going to change the world and kill Ethereum (why not), and I'm gonna close this browser tab without finishing the entire post.
 
@@ -108,11 +114,11 @@ I do not intend to bash the idea of democracy and using democracy to govern DAOs
 
 No, what I wish to convey to you all is that we need to start taking things seriously.
 
-If you didn't be a jerk and just skip over everything before "Current Efforts", you'd know that I view DAOs as the key tool to turn Political Science into a real science. Indeed, we are in the process of establishing a new field of research, which demands a paradigm shift in our mindset and our methodology. As all research go, we need to do everything formally, with grown-up math and fancy symbols. We need less whitepapers, and more academic papers; less out-of-thin-air Rube Goldberg systems with only hand-wavy justifications as to why they would work as intended, and more simple systems backed by mathematical proofs and analyses that can be the building blocks of complex systems. We need to stop treating discussions as political debates, and start using formal logic and scientific evidence to convince others of our points. 
+If you didn't just skip over everything before "Current Efforts" (and make me very sad), you'd know that I view DAOs as the key tool to turn Political Science into a real science. Indeed, we are in the process of establishing a new field of research, which demands a paradigm shift in our mindset and our methodology. As all research go, we need to do everything formally, with grown-up math and fancy symbols. We need less whitepapers, and more academic papers; less out-of-thin-air Rube Goldberg systems with only hand-wavy justifications as to why they would work as intended, and more simple systems backed by mathematical proofs and analyses that can be the building blocks of complex systems. We need to stop treating discussions as political debates, and start using formal logic and scientific evidence to convince others of our points. 
 
 This is why I don't think your 5th-gen quantum-resistant blockchain governance system is the way to go: whether it works or not doesn't matter, what does matter is how you got to where you are and how your work fits into the bigger picture. A skyscraper is worthless if it's made of matches, no matter how high it gets. We don't need or want isolated islands of brilliance, we want an interconnected universe of research, where others can extend or adopt your work with minimal effort, thanks to a shared language and a shared philosophy.
 
----
+## What We're Working On
 
 In the rest of this post, I would like to introduce a new governance system that we at Betoken are currently working on, as well as the relevant formal mathematical analysis we've done, as an example of the kind of governance research we really hope to see more of. While it may not be all that ground-breaking, I hope it can at least inspire some of you to start your own research.
 
@@ -120,30 +126,30 @@ In the rest of this post, I would like to introduce a new governance system that
 
 Here goes.
 
-## What Betoken Is
+### What Betoken Is
 
 Betoken is a decentralized crypto hedge fund that uses a new governance system we've created called **Incentivized Meritocracy** to make all of the investment decisions.
 
-## Our New Governance System
+### Our New Governance System
 
 The basic idea behind our Incentivized Meritocracy is that one's control over decisions is proportional to one's ability to make profitable decisions--one's merit. I'm going to break it down into two parts: its decision-making system, and its incentive system.
 
-### Decision-making
+#### Decision-making
 
 When a manager wants to, say, buy some X tokens for the fund, they would simply stake some Kairo--Betoken's internal token that denotes control/merit--that's proportional to the amount of X tokens to be purchased, after which the fund immediately executes this investment. They can then sell those tokens for the fund at (almost) any time they want, and the amount of Kairo tokens they get back depends on how profitable this investment was, so if the ROI of this investment was +20%, they get 20% more Kairo back; if the ROI was negative, they lose the same proportion of their stake.
 
 It's easy to see how Kairo tokens denote control, since the amount of funds that you can use for investing is directly determined by how much Kairo you own. It's also easy to see how Kairo can denote merit, since you can earn Kairo by making profitable decisions and lose Kairo for losing money.
 
-### Incentives
+#### Incentives
 
 Every month, a certain proportion (ex. 20%) of profits made in the previous month is distributed to Kairo holders, based on how much Kairo you own. The more good decisions you make, the more Kairo you have, the more income you get.
 
-## Our Research Efforts
+### Our Research Efforts
 
 We have summarized our research work in [a formal analysis of Incentivized Meritocracy](https://github.com/Betoken/documents/blob/master/Incentivized%20Meritocracies/Incentivized%20Meritocracies.pdf). I know you don't have time to read it, so I'll break it down for you.
 
 * Firstly, we formally defined what an Incentive Meritocracy is, in terms of the conditions it satisfies. 
-* Next, we proved that an Incentivized Meritocracy optimizes for its value function, by proving that the partial derivative of the system value function with regard to the individual value functions of all the actors is always positive.
+* Next, we proved that an Incentivized Meritocracy optimizes for its value function.
 * Then, we appropriated the nomenclature used for describing Reinforcement Learning agents to describe general multi-actor systems.
 * After that, we used our new notation to define a particular family of implementations of Incentivized Meritocracy. We then proved that this implementation is indeed an Incentivized Meritocracy by showing that it satisfies all the conditions to be one.
 * Finally, we formally described Betoken's governance system, and showed that it belongs to the family of Incentivized Meritocracy implementations we just mentioned.
@@ -154,6 +160,8 @@ Seems complicated, I know, but basically we did two things:
 2. Used formal logic and mathematics to prove that our system will work how we claimed it would.
 
 We believe that doing these two things is essential to establishing a serious field of research into governance systems. We need to use precise language in order to start communicating our ideas properly with each other, and we need to back up our ideas with convincing evidence, whether by using mathematical analyses or by conducting experiments.
+
+You can go to [betoken.fund](https://betoken.fund/) to learn more about us, or check out [a working demo on the Rinkeby Testnet](https://betoken.fund/betoken-ui).
 
 We hope that our attempt to formalize our governance system can give you a reference of how it can be done.
 
