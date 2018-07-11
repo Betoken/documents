@@ -66,6 +66,8 @@ $\because\frac{\partial v^{merit}}{\partial V^a}>0$
 
 $\therefore\forall a \in \mathbb{A}, \frac{\partial V}{\partial v^a}=\frac{1}{\frac{\partial v^{merit}}{\partial V^a}}\frac{1}{m^a} + k\frac{1}{v^{merit}}>0$
 
+In addition, $\frac{\part v^a}{\part v^{a'}} = \frac{\part (v^{merit}m^a)}{\part (v^{merit}m^{a'})}=v^{merit}\frac{1}{\frac{\part (v^{merit}m^{a'})}{\part m^a}}+m^a\frac{1}{\frac{\part (v^{merit}m^{a'})}{\part v^{merit}}}=v^{merit}\frac{1}{m^{a'}\frac{\part v^{merit}}{\part m^a}}+m^a\frac{1}{m^{a'}+\frac{\part m^{a'}}{\part v^{merit}}}>0$
+
 $Q.E.D.$
 
 ## 3. SAR Notation of IMs
