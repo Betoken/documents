@@ -213,7 +213,7 @@ With that, it can be proven that Betoken's implementation satisfies conditions 2
 
        $\forall a \in \mathbb{A},$
 
-       $\frac{\partial \overline{com}_t}{\partial V'^a_t}=\frac{\beta}{M_t}\frac{\partial(V'_t-V_{t-1})}{\partial V'^a_t}+\beta max(0, \Delta V'_{t-1})(-\frac{1}{M_t^2})\frac{M_t}{V'_t}+\gamma=\frac{\beta}{M_t}(1-\frac{max(0, \Delta V'_{t-1})}{V'_t})+\gamma=\frac{\beta}{M_t}min(1, \frac{V_{t-1}}{V'_t})+\gamma>0$
+       $\frac{\partial \overline{com}_t}{\partial V'^a_t}=\frac{\beta}{M_t}\frac{\partial(V'_t-V_{t-1})}{\partial V'^a_t}+\beta max(0, \Delta V'_{t-1})(-\frac{1}{M_t^2})\frac{M_t}{V'_t}+\frac{\gamma}{(M_t)^2}(\frac{\part V_t'}{\part V_t'^a}M_t-\frac{\part M_t}{\part V_t'^a}V_t')\\=\frac{\beta}{M_t}(1-\frac{max(0, \Delta V'_{t-1})}{V'_t})+\frac{\gamma}{(M_t)^2}(M_t-\frac{M_t}{V_t'}V_t')=\frac{\beta}{M_t}min(1, \frac{V_{t-1}}{V'_t})>0$
 
        $\because \frac{\partial v^{merit}_t}{\partial V'^a_t}=\frac{\partial v^{merit}_t}{\partial \overline{com}_t}\frac{\partial \overline{com}_t}{\partial V'^a_t}, \frac{\partial v^{merit}_t}{\partial \overline{com}_t}=\frac{\partial f(\overline{com}_t)}{\partial \overline{com}_t}>0$
 
@@ -221,9 +221,9 @@ With that, it can be proven that Betoken's implementation satisfies conditions 2
 
   2. $\Delta V'_{t-1}< 0$
 
-       $\forall a \in \mathbb{A}, \frac{\partial \overline{com}_t}{\partial V'^a_t}=\gamma$
+       $\forall a \in \mathbb{A}, \frac{\partial \overline{com}_t}{\partial V'^a_t}=0$
 
-       $\therefore \frac{\partial v^{merit}_t}{\partial V'^a_t}=\frac{\partial v^{merit}_t}{\partial \overline{com}_t}\frac{\partial \overline{com}_t}{\partial V'^a_t} > 0$
+       $\therefore \frac{\partial v^{merit}_t}{\partial V'^a_t}=\frac{\partial v^{merit}_t}{\partial \overline{com}_t}\frac{\partial \overline{com}_t}{\partial V'^a_t} = 0$
 
   Since $V'^a_t \approx V^a_t$ when $\beta, \gamma \ll 1$, $\frac{\partial v^{merit}_t}{\partial V^a_t} > 0$
 
